@@ -2,6 +2,8 @@
 
 
 
+
+
 MCP EJERCICIO #1
 
 Desafío MCP: Creador de Datos Curiosos 🐙
