@@ -1,5 +1,6 @@
-MCP EJERCICIO #1
 <img width="640" height="237" alt="image" src="https://github.com/user-attachments/assets/a5c25fe6-6331-4787-adc5-2ff43ca6d8c1" />
+
+MCP EJERCICIO #1
 
 Desafío MCP: Creador de Datos Curiosos 🐙
 ¡Bienvenido a tu primer desafío práctico! El objetivo de este ejercicio es aplicar la fórmula MCP (Modelo, Contexto, Petición) para resolver un problema real utilizando Python y la IA de Google.
