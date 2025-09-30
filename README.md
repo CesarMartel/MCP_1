@@ -16,8 +16,7 @@ C (Contexto)
 El contexto será una única variable con el tema de tu elección.
 
 P (Petición / Prompt)
-Tu prompt debe ser muy claro. Pídele a la IA que actúe como un investigador o un presentador de documentales y que te dé un solo dato curioso, sorprendente y poco conocido sobre el tema que le pasarás en el contexto.
-
+Tu prompt debe ser muy claro y específico.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🎯 Resultado Esperado
