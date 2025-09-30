@@ -8,7 +8,7 @@ Crearás un script de Python (datos_curiosos.py) que tome el nombre de un animal
 
 🔬 Aplicando la Fórmula MCP
 M (Modelo)
-Usaremos el modelo gemini-1.5-flash-001 de Google, conocido por ser extremadamente rápido y eficiente para tareas directas.
+Usaremos el modelo gemini-1.5-flash de Google, conocido por ser extremadamente rápido y eficiente para tareas directas.
 
 C (Contexto)
 El contexto será una única variable con el tema de tu elección.
