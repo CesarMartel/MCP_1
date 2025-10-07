@@ -13,15 +13,25 @@ def generar_dato_curioso(model_name, tema):
     try:
         model = GenerativeModel(model_name=model_name)
 
+        # Prompt mejorado: pedimos una salida JSON estructurada para facilitar el parseo
         prompt = (
-            f"Actúa como un historiador y antropólogo experto en la cultura de {tema}. "
-            f"Sorpréndeme con un dato fascinante y poco conocido sobre su historia, "
-            f"cultura o geografía. El dato debe ser conciso, "
-            f"verificable y fácil de entender para el público general."
+            f"Eres un historiador y antropólogo experto en la cultura de {tema}. "
+            "Proporciona un dato curioso, poco conocido y verificable sobre su historia, cultura o geografía. "
+            "La respuesta debe estar en español claro. Responde exclusivamente en formato JSON válido con las siguientes claves:\n"
+            "- titulo: una frase corta (máx. 10 palabras) que resuma el dato;\n"
+            "- resumen: una versión muy breve (1-2 líneas) del dato;\n"
+            "- detalle: explicación concisa pero completa (máx. 6-8 frases) con contexto histórico o cultural;\n"
+            "- fuentes: una lista (array) con 1-3 referencias verificables (URL o nombre de libro/artículo);\n"
+            "- fecha_estimada: si aplica, una fecha o periodo aproximado;\n"
+            "Instrucciones adicionales: sé preciso, evita especulaciones, y no incluyas texto fuera del JSON. "
+            "Si la información no es verificable, indica claramente en el campo 'fuentes' que requiere verificación. "
+            "No agregues comentarios ni explicaciones adicionales fuera del JSON."
         )
 
         response = model.generate_content(prompt)
-        return response.text
+        # Dependiendo de la versión del SDK, response puede tener 'text' o 'content'. Intentamos ambos.
+        text = getattr(response, 'text', None) or getattr(response, 'content', None) or str(response)
+        return text
     except Exception as e:
         return f"Error al generar el contenido desde la API: {e}"
 
