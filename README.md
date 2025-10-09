@@ -45,6 +45,9 @@ Antes de empezar, asegúrate de tener:
 
 [ ] Una captura de pantalla de tu terminal mostrando la ejecución y el resultado.
 
+<img width="1020" height="293" alt="image" src="https://github.com/user-attachments/assets/2681dbe3-d629-4009-9dca-a1ba8fb3fbd2" />
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
