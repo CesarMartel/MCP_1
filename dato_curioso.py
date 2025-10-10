@@ -1,15 +1,12 @@
 import vertexai
 from vertexai.generative_models import GenerativeModel
 
-# Paso 1: Configuración básica
 PROJECT_ID = "stone-poetry-473315-a9"
 LOCATION = "us-central1"
 
-# Paso 2: Modelos
 PRIMARY_MODEL = "gemini-1.5-flash"
 FALLBACK_MODEL = "gemini-2.5-flash"
 
-# Paso 3: Tema obligatorio
 try:
 	while True:
 		_user_input = input("Tema (animal/país/personaje) [obligatorio]: ").strip().lower()
@@ -20,7 +17,7 @@ try:
 except Exception:
 	raise RuntimeError("Entrada interactiva no disponible: ejecuta en una terminal e ingresa un tema.")
 
-# Paso 4: Prompt base
+
 prompt = (
 	f"M (Modelo): Usa '{PRIMARY_MODEL}' si está disponible.\n"
 	f"C (Contexto): El tema es '{tema}'. Puede ser un animal, país o personaje histórico.\n"
@@ -28,7 +25,7 @@ prompt = (
 	"Responde en 1 a 3 frases, en español, sin listas."
 )
 
-# --- Decoración consola ---
+
 RESET = "\033[0m"; BOLD = "\033[1m"; CYAN = "\033[36m"
 GREEN = "\033[32m"; YELLOW = "\033[33m"; GRAY = "\033[90m"
 USE_COLORS = True
@@ -54,7 +51,7 @@ def print_box(title, content):
 	for l in wrapped: print(f"| {l:<{width}} |")
 	print(c(bar,GREEN))
 
-# --- Nueva función: chequeo de relevancia ---
+
 def es_relevante(texto: str, tema: str) -> bool:
 	texto_lower = texto.lower()
 	if tema == "país":
@@ -65,7 +62,7 @@ def es_relevante(texto: str, tema: str) -> bool:
 		return any(p in texto_lower for p in ["persona", "histórico", "nació", "murió", "famoso", "biografía"])
 	return True
 
-# --- Generador con verificación ---
+
 def generar_dato_curioso() -> tuple[str, str, bool]:
 	vertexai.init(project=PROJECT_ID, location=LOCATION)
 	last_error = None
@@ -80,7 +77,7 @@ def generar_dato_curioso() -> tuple[str, str, bool]:
 	if last_error:
 		raise last_error
 
-# --- Ejecución principal ---
+
 if __name__ == "__main__":
 	try:
 		banner("EJERCICIO MCP #1 · Creador de Datos Curiosos")

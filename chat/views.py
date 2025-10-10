@@ -3,7 +3,7 @@ from .graph import generar_respuesta
 from .models import guardar_mensaje, obtener_conversacion
 
 def chat_view(request):
-    usuario = "default_user"  # podrías reemplazar por auth si quieres login
+    usuario = "default_user"
     ai_response = ""
     user_message = ""
 
