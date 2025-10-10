@@ -1,0 +1,7 @@
+Django>=4.2
+pymongo>=4.0
+langgraph
+langchain
+langchain-google-vertexai
+google-cloud-aiplatform
+vertexai>=0.5.0

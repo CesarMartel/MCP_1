@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot con Memoria</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background: #f9f9f9; }
+        .chat-box { width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        .msg-user { text-align: right; color: #333; margin: 10px; }
+        .msg-bot { text-align: left; color: #0078d4; margin: 10px; }
+        input[type=text] { width: 80%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 15px; border: none; border-radius: 5px; background: #0078d4; color: white; }
+    </style>
+</head>
+<body>
+    <div class="chat-box">
+        <h2>🤖 Chatbot con Memoria Persistente</h2>
+        <div>
+            {% for msg in historial %}
+                <div class="msg-user"><strong>Tú:</strong> {{ msg.usuario }}</div>
+                <div class="msg-bot"><strong>Bot:</strong> {{ msg.bot }}</div>
+            {% endfor %}
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="mensaje" placeholder="Escribe tu mensaje..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
