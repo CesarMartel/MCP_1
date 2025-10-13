@@ -28,25 +28,7 @@ Ajusta tu prompt para darle a la IA la instrucción precisa de lo que debe hacer
 
 Ejecuta tu archivo datos_curiosos.py en la terminal. El programa deberá imprimir en pantalla un dato curioso y sorprendente relacionado con el tema que elegiste.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-✅ Requerimientos Técnicos
-Antes de empezar, asegúrate de tener:
-
-[ ] Python 3.x instalado.
-
-[ ] La librería google-cloud-aiplatform instalada.
-
-[ ] Tu proyecto de Google Cloud con la API de Vertex AI habilitada.
-
-[ ] Tu variable de entorno GOOGLE_APPLICATION_CREDENTIALS configurada.
-
-[ ] El archivo de Python: datos_curiosos.py.
-
-[ ] Una captura de pantalla de tu terminal mostrando la ejecución y el resultado.
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 <img width="640" height="237" alt="image" src="https://github.com/user-attachments/assets/a5c25fe6-6331-4787-adc5-2ff43ca6d8c1" />
